@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+    --accent-colour: dodgerblue;
+    --text-accent-colour: #0073e6;
+    --default-text-size: 1.25em;
+    --default-text-colour: #666a76;
+}
+
+body {
+    /*font-family: "Font Awesome 6 Free", "Roboto", sans-serif;*/
+    font-family: "Roboto", sans-serif;
+    font-size: var(--default-text-size);
+    /* Default text colour */
+    /* This also colours lots of non-text elements, but this can be overwritten further down when needed */
+    color: var(--default-text-colour);
+
+    margin: 0;
+}
+
+nav {
+    border-bottom: 7px solid var(--accent-colour);
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    padding: 7px 8px;
+}
+
+@media only screen and (max-width: 700px) {
+    nav li {
+        display: block;
+    }
+}
+
+nav a {
+    color: var(--default-text-colour);
+    text-decoration: none;
+    padding: 7px 8px;
+}
+
+nav a:hover {
+    color: white;
+    background-color: var(--accent-colour);
+}
+
+nav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    opacity: .25;
+}
+
+.Icon {
+    width: 1em;
+    padding-left: 3px;
+    padding-right: 3px;
+
+    translate: 0 2px;
+}
+
+
+header {
+    height: 30vh;
+
+    background: url("images/header.png") no-repeat fixed center -450px;
+
+    /* I can't believe I have to use a flexbox to centre text vertically */
+    /* Web frontend is actually terrible */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+#HeaderName {
+    font-size: 4.5em;
+    font-weight: 300;
+    color: white;
+
+    margin: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    #HeaderName {
+        font-size: 3em;
+    }
+}
+
+#HeaderText {
+    color: white;
+    opacity: .7;
+
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    padding-top: 5px;
+    margin: 0;
+}
+
+
+.SectionContainer {
+    padding: 2%;
+}
+
+.SectionContainer:nth-of-type(2) {
+    background: #f2f2f2;
+}
+
+.Section {
+    width: 85vw;
+    margin: auto;
+}
+
+
+.ParagraphHeading {
+    font-size: 2em;
+    font-weight: 400;
+
+    padding-left: .5em;
+    border-left: .15em solid dodgerblue;
+}
+
+#TechnologiesFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+    #TechnologiesFlex {
+        flex-direction: column;
+    }
+}
+
+.TechnologiesFlexCol {
+    justify-content: space-around;
+
+    background-color: white;
+
+    border-radius: .5rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    padding: 25px;
+}
+
+.TechnologiesFlexCol span {
+    color: var(--text-accent-colour);
+    font-size: 1.75rem;
+}
+
+.TechnologiesFlexCol li {
+    font-size: 1.5rem;
+}
+
+.TechnologiesFlexCol li::marker {
+    /* The font that contains the icons for the bullets */
+    /* It's probably best if there's no fallback so if the font fails to load, nothing is shown instead of a square */
+    font-family: "FontAwesome";
+    color: var(--accent-colour);
+}
+
+#LanguagesList {
+    /* Fontawesome codepoints */
+    list-style: symbols(cyclic "\f3e2" "\e07a" "\f8e1" "\f3b8");
+}
+
+#TechnologiesList {
+    list-style: symbols(cyclic "\f841" "\f1c0" "\f1a0" "\f3d3" "\f3b6" "\f41b");
+}
+
+
+footer {
+    background-color: #d3dbe6;
+    min-height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+
+    text-align: center;
+}
+
+
+/* Beyond here is stylings for the custom page */
+ .CSSGreen {
+     color: limegreen;
+ }
