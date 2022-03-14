@@ -74,7 +74,7 @@ hr {
 header {
     height: 30vh;
 
-    background: url("images/header.png") no-repeat fixed center -450px;
+    background: url("images/header.avif") no-repeat fixed center -450px;
 
     /* I can't believe I have to use a flexbox to centre text vertically */
     /* Web frontend is actually terrible */
